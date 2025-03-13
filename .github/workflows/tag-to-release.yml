@@ -12,5 +12,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # gets entire git history, needed for automatic changelogs
       - name: Release
         uses: softprops/action-gh-release@latest
